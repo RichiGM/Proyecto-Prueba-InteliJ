@@ -1,0 +1,23 @@
+.bg-azul-principal{
+-fx-background-color: #006BE6}
+
+.bg-azul-claro{
+-fx-background-color: #01B5E6;
+}
+
+.bg-azul-rey{
+-fx-background-color: #00E6CD}
+
+.bg-verde-agua{
+-fx-background-color:#09E885}
+
+.bg-azul-fuerte{
+-fx-background-color: #0023E6}
+
+.text-white-form{
+-fx-text-fill:white;
+-fx-font-size: 14;}
+
+.bg-azul-degradado{
+ -fx-background-color: linear-gradient(to bottom,#006BE6,#00E6CD);
+}

@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.utleon.dsm406_peliculas_renta.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="bg-azul-principal" stylesheets="@style/estilos.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="70.0" stylesheets="@style/estilos.css" text="Registro de peliculas" textFill="#fffefe" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="42.0" layoutY="121.0" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <TextField fx:id="txtTitulo" prefHeight="25.0" prefWidth="217.0" promptText="Ingresa el titulo" />
+                  <TextField fx:id="txtGenero" promptText="Ingresa el género" />
+                  <TextField fx:id="txtAnio" promptText="Ingresa el Año " />
+                  <TextField fx:id="txtDirector" promptText="Ingresa el director" />
+                  <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#registrar" prefHeight="25.0" prefWidth="70.0" text="Registrar" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Rentar" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Devolver" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="81.0" fitWidth="76.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-azul-claro" stylesheets="@style/estilos.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" layoutX="96.0" layoutY="14.0" styleClass="text-white-form" stylesheets="@style/estilos.css" text="Peliculas compradas" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <TableView layoutX="50.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="30.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-azul-rey" stylesheets="@style/estilos.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" layoutX="103.0" layoutY="6.0" styleClass="text-white-form" stylesheets="@style/estilos.css" text="Peliculas rentadas" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <TableView layoutX="50.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="30.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
