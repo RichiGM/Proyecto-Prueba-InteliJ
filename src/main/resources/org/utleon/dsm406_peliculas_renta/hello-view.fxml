@@ -27,7 +27,7 @@
                   <TextField fx:id="txtGenero" promptText="Ingresa el género" />
                   <TextField fx:id="txtAnio" promptText="Ingresa el Año " />
                   <TextField fx:id="txtDirector" promptText="Ingresa el director" />
-                  <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#registrar" prefHeight="25.0" prefWidth="70.0" text="Registrar" />
+                  <Button fx:id="btnRegistrar" mnemonicParsing="false"  prefHeight="25.0" prefWidth="70.0" text="Registrar" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Rentar" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Devolver" />
                </children>
