@@ -1,32 +1,35 @@
 package org.utleon.dsm406_peliculas_renta;
 
 public class PeliculasModel {
-    String titulo, genero, director, anio;
+    int idPelicula, anio;
+    String titulo, genero,  director;
+
 
     public PeliculasModel() {
     }
 
-    public PeliculasModel(String titulo, String genero, String director, String anio) {
+    public PeliculasModel(int idPelicula, String titulo, String genero, int anio, String director) {
+        this.idPelicula = idPelicula;
         this.titulo = titulo;
         this.genero = genero;
-        this.director = director;
         this.anio = anio;
-    }
-
-    public String getAnio() {
-        return anio;
-    }
-
-    public void setAnio(String anio) {
-        this.anio = anio;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
         this.director = director;
+    }
+
+    public int getIdPelicula() {
+        return idPelicula;
+    }
+
+    public void setIdPelicula(int idPelicula) {
+        this.idPelicula = idPelicula;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getGenero() {
@@ -37,11 +40,19 @@ public class PeliculasModel {
         this.genero = genero;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
     }
 }
